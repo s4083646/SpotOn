@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f8c99b;
+}
+
+button,
+a,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(255, 112, 72, 0.55);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: #f8d66d;
+  color: #20201f;
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(32px); }
+}
+
+@keyframes pop-in {
+  from { opacity: 0; transform: translateY(-8px) scale(0.96); }
+}
+
+.sheet-backdrop {
+  animation: fade-in 180ms ease-out;
+}
+
+.sheet-panel {
+  animation: slide-up 260ms cubic-bezier(0.2, 0.9, 0.3, 1.1);
+}
+
+.toast-in {
+  animation: pop-in 220ms ease-out;
+}
+
+.preview-in {
+  animation: slide-up 220ms ease-out;
+}
+
+@keyframes buddy-float {
+  0%,
+  100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-4px) rotate(1deg); }
+}
+
+.buddy-float {
+  animation: buddy-float 3.4s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+
+  .buddy-float {
+    animation: none;
+  }
+}
+
+/* ---------- Map (Leaflet) ---------- */
+
+.leaflet-container {
+  font-family: inherit;
+  background: #ece6da;
+}
+
+/* A gentle warm tint so OpenStreetMap tiles sit comfortably with the app palette. */
+.leaflet-tile-pane {
+  filter: saturate(0.8) sepia(0.12) brightness(1.02);
+}
+
+.leaflet-control-attribution {
+  background: rgba(255, 253, 248, 0.85) !important;
+  font-size: 9px;
+  color: #7d7168;
+}
+
+.leaflet-control-attribution a {
+  color: #e9532f;
+}
+
+/* Attribution sits top-left, below the floating chips, so the bottom nav and preview card never cover it. */
+.leaflet-top.leaflet-left {
+  top: 92px;
+}
+
+.leaflet-top.leaflet-left .leaflet-control-attribution {
+  margin: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.spot-pin-anchor {
+  background: none;
+  border: 0;
+}
+
+.spot-pin {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px 4px 4px;
+  border: 2px solid #20201f;
+  border-radius: 999px;
+  background: #fffdf8;
+  color: #20201f;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+  box-shadow: 0 6px 14px rgba(55, 39, 29, 0.25);
+  transform: translate(-50%, calc(-100% - 8px));
+  transform-origin: 50% calc(100% + 8px);
+  transition: transform 160ms ease, background-color 160ms ease;
+  cursor: pointer;
+}
+
+/* Little pointer under the pin. */
+.spot-pin::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #20201f;
+  border-bottom: 2px solid #20201f;
+  background: inherit;
+  transform: translate(-50%, -2px) rotate(45deg);
+  border-bottom-right-radius: 3px;
+}
+
+.spot-pin__glyph {
+  display: flex;
+  height: 24px;
+  width: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+}
+
+.spot-pin__glyph svg {
+  height: 15px;
+  width: 15px;
+}
+
+.spot-pin--library .spot-pin__glyph { background: #f8d66d; }
+.spot-pin--cafe .spot-pin__glyph { background: #ffb58f; }
+.spot-pin--campus .spot-pin__glyph { background: #afc5f1; }
+
+.spot-pin__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.spot-pin__name {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+
+.spot-pin:hover {
+  transform: translate(-50%, calc(-100% - 8px)) scale(1.08);
+}
+
+.spot-pin.is-closed {
+  opacity: 0.72;
+}
+
+.spot-pin.is-selected {
+  background: #20201f;
+  color: #fff;
+  opacity: 1;
+  padding-right: 12px;
+  transform: translate(-50%, calc(-100% - 8px)) scale(1.12);
+  box-shadow: 0 0 0 5px rgba(255, 112, 72, 0.35), 0 10px 22px rgba(32, 32, 31, 0.35);
+}
+
+.spot-pin.is-selected .spot-pin__text span:last-child {
+  color: #f8d66d;
+}
+
+.leaflet-marker-icon:focus-visible {
+  outline: none;
+}
+
+.leaflet-marker-icon:focus-visible .spot-pin {
+  box-shadow: 0 0 0 4px rgba(255, 112, 72, 0.6);
+}
+
+.user-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 18px;
+  width: 18px;
+  transform: translate(-50%, -50%);
+  border: 3px solid #fff;
+  border-radius: 999px;
+  background: #3b82f6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-dot span {
+  position: absolute;
+  inset: -12px;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.22);
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  from { transform: scale(0.4); opacity: 1; }
+  to { transform: scale(1.4); opacity: 0; }
+}
