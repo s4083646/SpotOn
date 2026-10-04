@@ -53,7 +53,7 @@ export const spots: StudySpot[] = [
     id: 2,
     name: "Seven Seeds",
     type: "Café",
-    image: "https://images.unsplash.com/photo-1655126340759-c9ed6af84b49?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=700",
+    image: "https://sevenseeds.com.au/cdn/shop/files/seven-seeds-carlton-store-interior.webp?v=1724332280&width=1307",
     alt: "Warm and colourful Melbourne café interior",
     description:
       "A roomy warehouse café near Melbourne Uni with big shared tables and excellent coffee. Best for lighter reading and group catch-ups outside the lunch rush.",
@@ -83,7 +83,7 @@ export const spots: StudySpot[] = [
     id: 3,
     name: "Library at the Dock",
     type: "Library",
-    image: "https://images.unsplash.com/photo-1515199232915-d74ea00e6149?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&q=85&w=700",
+    image: "https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6IjJkYjQ2NTM2LWVjMjYtNDAzZC05NGRjLTg0MzIxNjdmMjU2ZiIsInB1ciI6ImJsb2JfaWQifX0=--7c5ce97b0e08f436689ace372f9a093dfaedc8b2/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJncmF2aXR5IjoiQ2VudGVyIiwicmVzaXplX3RvX2ZpbGwiOls4ODAsNTkwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--8ba21a1f014d91c43eb97f346a0dc62d26bd59b2/f9e2b3b4-77e8-4f45-afae-dc880ffa9236.jpg",
     alt: "Bright library reading space with rows of books",
     description:
       "A light-filled waterfront library with harbour views, bookable study rooms and plenty of soft seating. Calm on weekdays and a great escape from the CBD.",
@@ -113,7 +113,7 @@ export const spots: StudySpot[] = [
     id: 4,
     name: "City Library",
     type: "Library",
-    image: unsplash("1507842217343-583bb7270b66", 700),
+    image: "https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6IjY4Y2EzMjM0LTAwMjktNDA3ZC04Mjg1LWVkOGEyYzAyN2MzZSIsInB1ciI6ImJsb2JfaWQifX0=--61a2afc345b769e3fcf387ed67f54cc9f5abfe52/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJncmF2aXR5IjoiQ2VudGVyIiwicmVzaXplX3RvX2ZpbGwiOls4ODAsNTkwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--8ba21a1f014d91c43eb97f346a0dc62d26bd59b2/fac640d0-c3fb-4f1f-acf6-84b6ba8709cb.jpg",
     alt: "Tall wooden shelves filled with books",
     description:
       "A friendly laneway library right in the city with a busy ground floor and quieter study desks upstairs. Handy between classes and close to trams.",
@@ -143,7 +143,7 @@ export const spots: StudySpot[] = [
     id: 5,
     name: "Baillieu Library",
     type: "Campus",
-    image: unsplash("1562774053-701939374585", 700),
+    image: "https://framerusercontent.com/images/aOx9HINEv09bpRga26vDuysWyr8.jpg?scale-down-to=2048&width=2500&height=1669",
     alt: "A historic university building behind a green lawn",
     description:
       "The University of Melbourne's main library, with silent floors, group study rooms and long opening hours during semester. Open to visitors for on-site study.",
@@ -173,7 +173,7 @@ export const spots: StudySpot[] = [
     id: 6,
     name: "Kathleen Syme Library",
     type: "Library",
-    image: unsplash("1600431521340-491eca880813", 700),
+    image: "https://croxonramsay.com.au/wp-content/uploads/2016/04/Kathlene_3.jpg",
     alt: "Bright, modern library aisles with white shelving",
     description:
       "A modern community library on Faraday Street with bright study tables, a quiet reading area and a relaxed local feel. Rarely full, even during exams.",
@@ -203,7 +203,7 @@ export const spots: StudySpot[] = [
     id: 7,
     name: "Higher Ground",
     type: "Café",
-    image: unsplash("1554118811-1e0d58224f24", 700),
+    image: "https://highergroundmelbourne.com.au/static/96141bb2f3fdea9f0418c1b2124d8362/ab930/Full-Screen-Image.jpg",
     alt: "Spacious café with plants, timber tables and pendant lights",
     description:
       "A soaring heritage café with plenty of tables and natural light. Lively at brunch but comfortable for laptop work in the afternoon lull.",
@@ -233,7 +233,7 @@ export const spots: StudySpot[] = [
     id: 8,
     name: "Southbank Library at Boyd",
     type: "Library",
-    image: unsplash("1524995997946-a1c2e315a42f", 700),
+    image: "https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ImMxYTI4YTk2LWZmODYtNDA1MC1iZDM2LWNiM2UwNTNkNjNlYiIsInB1ciI6ImJsb2JfaWQifX0=--cfe4e6c0ad71fc2925407ca873cad1bf73d7c40b/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJncmF2aXR5IjoiQ2VudGVyIiwicmVzaXplX3RvX2ZpbGwiOls4ODAsNTkwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--8ba21a1f014d91c43eb97f346a0dc62d26bd59b2/Southbank%20Library%20at%20Boyd%201.jpg",
     alt: "Curved library shelves lined with colourful books",
     description:
       "A calm library inside a converted school building, with sunny desks and a small courtyard. A quiet alternative to the busy CBD libraries.",
@@ -263,7 +263,7 @@ export const spots: StudySpot[] = [
     id: 9,
     name: "Fitzroy Library",
     type: "Library",
-    image: unsplash("1481627834876-b7833e8f5570", 700),
+    image: "https://www.yarracity.vic.gov.au/m/9H22xJ4bX2UAYP9sNKjqf-2SzEw8ELdiUhYSy0lPFMw/resize:fit:2765:1555:1:1/g:fp:0.5889112222558793:0.6114577047030805/sm:1/dpr:1.25/L3NpdGVzL2RlZmF1bHQvZmlsZXMvMjAyNC0wNi9maXR6cm95X2xpYnJhcnlfYXByaWxfMjAyM18xOC5qcGc=",
     alt: "A long aisle of library shelves under warm lights",
     description:
       "A cosy neighbourhood library with a few dedicated study desks and a laid-back atmosphere. Great for reading and assignment writing.",
@@ -293,7 +293,7 @@ export const spots: StudySpot[] = [
     id: 10,
     name: "Market Lane Coffee",
     type: "Café",
-    image: unsplash("1445116572660-236099ec97a0", 700),
+    image: "https://whatson.melbourne.vic.gov.au/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ImNhM2M1ZGRhLTE2M2UtNGJmMS1iYWE1LTk2NTMxZjk0OTg1NCIsInB1ciI6ImJsb2JfaWQifX0=--ef07ef90890f923cd95b1558025262594eafb7ca/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJncmF2aXR5IjoiQ2VudGVyIiwicmVzaXplX3RvX2ZpbGwiOls4ODAsNTkwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--8ba21a1f014d91c43eb97f346a0dc62d26bd59b2/Market%20Lane%20Victoria%202.jpg",
     alt: "A small café table with coffee by a sunny window",
     description:
       "A bright specialty coffee spot beside Queen Victoria Market. Small and chatty, so best for a quick review session with a great flat white.",
